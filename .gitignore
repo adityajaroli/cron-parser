@@ -1,0 +1,15 @@
+# Temporary and binary files
+*.py[cod]
+__pycache__/*
+.cache/*
+
+venv*
+.DS_Store
+
+# Project files
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+.vscode
