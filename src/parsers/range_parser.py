@@ -6,7 +6,7 @@ class RangeParser:
     @staticmethod
     def parse(_min, _max, val):
         temp = val.split("-")
-        if not temp or len(temp) > 2 or not temp[0].isnumeric() or not temp[1].isnumeric():
+        if not temp or len(temp) > 2:
             raise Exception(val)
 
         low = NumberParser.parse(_min, _max, temp[0])

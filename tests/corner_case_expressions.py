@@ -10,5 +10,11 @@ corner_cases_expressions = [
     "*,* 0 12 * * /user",
     "1,* 0 12 * * /user",
     "*/* 0 12 * * /user",
-    "1/* 0 12 * * /user"
+    "1/* 0 12 * * /user",
+    "s/* 0 12 * * /user",
+    "s 0 12 * * /user",
+    "1 s 12 * * /user",
+    "1 1 s * * /user",
+    "1 1 12 s * /user",
+    "1 1 12 * s /user",
 ]
