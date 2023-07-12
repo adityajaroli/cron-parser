@@ -16,7 +16,7 @@ class Parser:
     def parse(val: str, _min: int, _max: int):
         values = []
         if val.isnumeric():
-            res = [NumberParser.parse(_min, _max, int(val))]
+            res = [NumberParser.parse(_min, _max, val)]
         elif Parser.ASTERISK == val:
             res = AllParser.parse(_min, _max)
         elif Parser.SLASH in val:

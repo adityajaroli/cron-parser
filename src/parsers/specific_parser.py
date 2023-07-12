@@ -9,6 +9,6 @@ class SpecificParser:
             raise Exception(val)
 
         return [
-            NumberParser.parse(_min, _max, int(temp[0])),
-            NumberParser.parse(_min, _max, int(temp[1]))
+            NumberParser.parse(_min, _max, temp[0]),
+            NumberParser.parse(_min, _max, temp[1])
         ]
