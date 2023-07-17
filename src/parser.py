@@ -13,18 +13,18 @@ class Parser:
     SLASH = "/"
 
     @staticmethod
-    def parse(val: str, _min: int, _max: int):
+    def parse(val: str, field):
         values = []
         if val.isnumeric():
-            res = [NumberParser.parse(_min, _max, val)]
+            res = [NumberParser.parse(field, val)]
         elif Parser.ASTERISK == val:
-            res = AllParser.parse(_min, _max)
+            res = AllParser.parse(field)
         elif Parser.SLASH in val:
-            res = SeparatorParser.parse(_min, _max, val)
+            res = SeparatorParser.parse(field, val)
         elif Parser.COMMA in val:
-            res = SpecificParser.parse(_min, _max, val)
+            res = SpecificParser.parse(field, val)
         elif Parser.HYPHEN in val:
-            res = RangeParser.parse(_min, _max, val)
+            res = RangeParser.parse(field, val)
         else:
             raise Exception(f"Invalid literal in the val: {val}")
 
