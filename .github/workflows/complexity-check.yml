@@ -1,0 +1,24 @@
+name: Code Complexity Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write   # needed for the PR comment
+
+jobs:
+  complexity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # required so the action can diff against the base commit
+
+      - name: Run complexity analysis
+        uses: adityajaroli/code-companion@main
+        with:
+          max-cyclomatic: 20
