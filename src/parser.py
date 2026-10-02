@@ -11,6 +11,7 @@ class Parser:
     HYPHEN = "-"
     ASTERISK = "*"
     SLASH = "/"
+    DOUBLE_SLASH = "//"
 
     @staticmethod
     def parse(val: str, field):
